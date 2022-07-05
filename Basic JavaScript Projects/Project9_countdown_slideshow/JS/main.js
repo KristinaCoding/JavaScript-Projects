@@ -1,3 +1,20 @@
+//calling function and creating a variable
+function countdown(){
+  var seconds= document.getElementById("seconds").value;
+//nested function with second showing it needs to count from the number given -1
+  function tick(){
+      seconds = seconds -1;
+      //display text connecting it with HTML
+      timer.innerHTML = seconds;
+      setTimeout (tick, 1000);
+      //conditional statetment with text howing if 0
+      if (seconds == -1) {
+          alert("Time`s up!");
+      }
+  }
+  tick();
+}
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
