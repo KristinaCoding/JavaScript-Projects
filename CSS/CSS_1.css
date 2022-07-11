@@ -1,0 +1,13 @@
+input{
+ width: 50%;
+ border:2px solid coral;
+ border-radius: 5px;
+ background-color: antiquewhite;
+ color:brown;
+}
+
+input[type=button],input[type=submit],input[type=reset] {
+    background-color: coral;
+    border:none;
+    color:black;
+}
