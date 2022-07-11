@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+    color:rgba(146, 8, 93, 0.8);
+}
+
+/*This container is my canvas and tables*/
+.center-container {
+    /*Set the width*/
+        width: 608px;
+        /*This centers the container*/
+        margin: 0 auto;
+        /*50p down from top*/
+        margin-top: 50px;
+    }
+    
+    table {
+        /*collapse borders in one*/
+        border-collapse: collapse;
+        /*this hides the borders*/
+        border-style: hidden;
+    }
+    
+    td { 
+        /*this property changes the cursor*/
+        cursor: pointer;
+        /*table borders*/
+        border: 4px solid rgba(146, 8, 93, 0.8);
+        /*This removes default padding*/
+        padding: 0px;
+        width: 200px;
+        height: 200px;
+    }
+    
+    canvas {
+    /*this property sets the position to the top left of the canvas*/
+    position: absolute;
+    /*on the top*/
+    z-index: 10;
+    /*invisible canvas*/
+    pointer-events: none;
+    }
+
