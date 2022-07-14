@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--Language used:english-->
+<html lang="en">
+    <head>
+        <!--characters used UNIFORM TRANSFORMATION FORMAT 8 that makes
+        the characters in binary so the computer can read it easily-->
+        <meta charset="utf-8">
+        <title>Basic AJAX Demo</title>
+        <!--Link to CSS-->
+		<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--sectiion class div called main-->
+        <div class="main">
+			<h2>Get The Latest Content:</h2>
+            <!--section class content with identifier content-->
+			<div class='content' id="content">
+                <!--Button press with class button and function on onclick to occur-->
+				<input type="button" class="button" value="Get Content" id="btn_content" button onclick="getContent()" ;*/>			
+            </div>
+            <!--getting all inside javascript in html and displaying it,making website dynamic-->
+		<script type="text/javascript">
+
+//STEP1 setup the xml http request object
+var ajax = new XMLHttpRequest();
+//STEP2 prepare the open AJAX request
+ajax.open("GET","content.html");
+//STEP3 define the ajax response callback method
+ajax.onreadystatechange=function(){
+    if (ajax.readyState==4) {
+        document.getElementById("content").innerHTML=ajax.responseText;
+    }
+}
+//STEP4 send the ajax request for data
+function getContent(){
+    ajax.send();
+    document.getElementById("btn_content").style.display = "none";
+}
+		</script>
+    </body>
+</html>
